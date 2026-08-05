@@ -3,9 +3,15 @@ command:
   - "app.py"
 
 env:
-     - name: LAKEBASE_INSTANCE_NAME
-       value: "assignment1-db"
-     - name: LAKEBASE_PG_ROLE
-       value: "ajinkya.ambike@gmail.com"
-     - name: LAKEBASE_DATABASE
-       value: "databricks_postgres"
+  - name: PGHOST
+    value: "ep-sweet-fog-d87il89p.database.us-east-2.cloud.databricks.com"
+  - name: PGDATABASE
+    value: "databricks_postgres"
+  - name: PGUSER
+    value: "4206b5d0-8f51-4edd-8383-7af381309eff"
+  - name: PGPORT
+    value: "5432"
+  - name: PGSSLMODE
+    value: "require"
+  - name: ENDPOINT_NAME
+    value: "projects/assignment1-db/branches/production/endpoints/primary"
