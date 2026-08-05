@@ -4,9 +4,8 @@ command:
 
 env:
      - name: LAKEBASE_INSTANCE_NAME
-       value: "<your-instance-name>"
+       value: "assignment1-db"
      - name: LAKEBASE_PG_ROLE
-       value: "<your-postgres-role>"
-     #optional, defaults to "databricks_postgres"
+       value: "ajinkya.ambike@gmail.com"
      - name: LAKEBASE_DATABASE
        value: "databricks_postgres"
