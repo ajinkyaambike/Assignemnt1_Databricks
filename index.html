@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Support Ticket System</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+}
+
+header{
+    background:#0078D4;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.container{
+    width:95%;
+    margin:auto;
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+}
+
+.left-panel{
+    width:40%;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 2px 8px rgba(0,0,0,.1);
+}
+
+.right-panel{
+    width:60%;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 2px 8px rgba(0,0,0,.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:10px;
+}
+
+table th{
+    background:#0078D4;
+    color:white;
+}
+
+button{
+    background:#0078D4;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#005fa3;
+}
+
+input,
+textarea,
+select{
+
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+
+}
+
+.message{
+
+    border-left:5px solid #0078D4;
+    background:#eef5fc;
+    padding:10px;
+    margin-bottom:15px;
+
+}
+
+h2{
+    color:#0078D4;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🎫 Support Ticket System</h1>
+
+</header>
+
+<div class="container">
+
+<!-- LEFT PANEL -->
+
+<div class="left-panel">
+
+<h2>Support Tickets</h2>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Cannot Login</td>
+<td>Open</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Cluster Failure</td>
+<td>In Progress</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Password Reset</td>
+<td>Resolved</td>
+</tr>
+
+</table>
+
+<br>
+
+<label>Select Ticket</label>
+
+<select>
+
+<option>Ticket 1</option>
+
+<option>Ticket 2</option>
+
+<option>Ticket 3</option>
+
+</select>
+
+</div>
+
+<!-- RIGHT PANEL -->
+
+<div class="right-panel">
+
+<h2>Ticket Messages</h2>
+
+<div class="message">
+
+<b>Alice</b>
+
+<p>I cannot login to the portal.</p>
+
+<small>2026-08-04 10:00 AM</small>
+
+</div>
+
+<div class="message">
+
+<b>Support Team</b>
+
+<p>We are investigating the issue.</p>
+
+<small>2026-08-04 10:15 AM</small>
+
+</div>
+
+<hr>
+
+<h2>Create New Ticket</h2>
+
+<input
+type="text"
+placeholder="Ticket Title">
+
+<input
+type="text"
+placeholder="Created By">
+
+<button>Create Ticket</button>
+
+<hr>
+
+<h2>Add Message</h2>
+
+<textarea
+rows="5"
+placeholder="Enter message">
+</textarea>
+
+<input
+type="text"
+placeholder="Author">
+
+<button>Add Message</button>
+
+<hr>
+
+<h2>Update Status</h2>
+
+<select>
+
+<option>Open</option>
+
+<option>In Progress</option>
+
+<option>Resolved</option>
+
+</select>
+
+<button>Update Status</button>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
