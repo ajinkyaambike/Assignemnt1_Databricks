@@ -110,7 +110,7 @@ status = st.selectbox(
 
 if st.button("Update Status"):
 
-    update_status(
+    update_ticket_status(
         selected_ticket,
         status
     )
