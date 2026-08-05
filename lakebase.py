@@ -1,3 +1,5 @@
+%pip install sqlalchemy
+
 """
 Lakebase (Databricks-managed Postgres) connection helper.
 
