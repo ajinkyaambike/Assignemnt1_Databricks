@@ -5,7 +5,7 @@ from crud import (
     get_ticket_messages,
     create_ticket,
     add_message,
-    update_status
+    update_ticket_status
 )
 
 st.title("🎫 Support Ticket System")
