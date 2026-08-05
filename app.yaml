@@ -9,4 +9,4 @@ env:
        value: "<your-postgres-role>"
      #optional, defaults to "databricks_postgres"
      - name: LAKEBASE_DATABASE
-       value: "supportdb"
+       value: "databricks_postgres"
