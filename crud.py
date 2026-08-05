@@ -1,6 +1,8 @@
 import pandas as pd
 from sqlalchemy import text
-from db import engine
+from lakebase import get_engine
+
+engine = get_engine()
 
 
 # =====================================================
