@@ -119,15 +119,10 @@ if st.button("Create Ticket"):
         st.error("Created By is required.")
 
     else:
-        create_ticket(...)
-        st.success("Ticket created successfully.")
-        st.rerun()
-        
-if title and created_by:
 
         create_ticket(title, created_by)
 
-        st.success("Ticket Created")
+        st.success("Ticket created successfully.")
 
         st.rerun()
 
