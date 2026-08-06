@@ -8,27 +8,6 @@ from crud import (
     update_ticket_status
 )
 
-col1, col2, col3, col4 = st.columns(4)
-
-col1.metric(
-    "Total Tickets",
-    len(tickets)
-)
-
-col2.metric(
-    "Open",
-    len(tickets[tickets["status"]=="open"])
-)
-
-col3.metric(
-    "In Progress",
-    len(tickets[tickets["status"]=="in_progress"])
-)
-
-col4.metric(
-    "Resolved",
-    len(tickets[tickets["status"]=="resolved"])
-)
 
 st.title("🎫 Support Ticket System")
 
@@ -51,6 +30,29 @@ tickets = get_all_tickets()
 st.subheader("All Support Tickets")
 
 st.dataframe(tickets)
+
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric(
+    "Total Tickets",
+    len(tickets)
+)
+
+col2.metric(
+    "Open",
+    len(tickets[tickets["status"]=="open"])
+)
+
+col3.metric(
+    "In Progress",
+    len(tickets[tickets["status"]=="in_progress"])
+)
+
+col4.metric(
+    "Resolved",
+    len(tickets[tickets["status"]=="resolved"])
+)
+
 
 #######################################################
 # Select Ticket
