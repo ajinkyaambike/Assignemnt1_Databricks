@@ -8,7 +8,39 @@ from crud import (
     update_ticket_status
 )
 
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric(
+    "Total Tickets",
+    len(tickets)
+)
+
+col2.metric(
+    "Open",
+    len(tickets[tickets["status"]=="open"])
+)
+
+col3.metric(
+    "In Progress",
+    len(tickets[tickets["status"]=="in_progress"])
+)
+
+col4.metric(
+    "Resolved",
+    len(tickets[tickets["status"]=="resolved"])
+)
+
 st.title("🎫 Support Ticket System")
+
+status_filter = st.selectbox(
+    "Filter by Status",
+    [
+        "All",
+        "Open",
+        "In Progress",
+        "Resolved"
+    ]
+)
 
 #######################################################
 # Display Tickets
@@ -29,6 +61,23 @@ ticket_ids = tickets["ticket_id"].tolist()
 selected_ticket = st.selectbox(
     "Select Ticket",
     ticket_ids
+)
+
+priority = st.selectbox(
+    "Priority",
+    ["Low", "Medium", "High", "Critical"]
+)
+
+category = st.selectbox(
+    "Category",
+    [
+        "Login",
+        "Infrastructure",
+        "Database",
+        "Application",
+        "Security",
+        "Other"
+    ]
 )
 
 #######################################################
@@ -61,7 +110,18 @@ created_by = st.text_input("Created By")
 
 if st.button("Create Ticket"):
 
-    if title and created_by:
+    if title.strip() == "":
+        st.error("Title cannot be empty.")
+
+    elif created_by.strip() == "":
+        st.error("Created By is required.")
+
+    else:
+        create_ticket(...)
+        st.success("Ticket created successfully.")
+        st.rerun()
+        
+if title and created_by:
 
         create_ticket(title, created_by)
 
